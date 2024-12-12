@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia & Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .multimedia-section, .registration-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="multimedia-section">
+        <h2>Multimedia Content</h2>
+        
+        <h3>Audio Player</h3>
+        <audio controls>
+            <source src="/path/to/audio.mp3" type="audio/mpeg">
+            <source src="/path/to/audio.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Player</h3>
+        <video controls poster="/path/to/poster-image.jpg" width="100%">
+            <source src="/path/to/video.mp4" type="video/mp4">
+            <source src="/path/to/video.webm" type="video/webm">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section class="registration-section">
+        <h2>User Registration</h2>
+        <form>
+            <label for="fullName">Full Name</label>
+            <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                required 
+                minlength="2" 
+                maxlength="50"
+            >
+
+            <label for="email">Email Address</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+            >
+
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required 
+                minlength="8"
+            >
+
+            <label for="age">Age</label>
+            <input 
+                type="number" 
+                id="age" 
+                name="age" 
+                required 
+                min="18" 
+                max="120"
+            >
+
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <label>
+                <input 
+                    type="checkbox" 
+                    name="terms" 
+                    required
+                > 
+                I agree to the Terms and Conditions
+            </label>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+</body>
+</html>
